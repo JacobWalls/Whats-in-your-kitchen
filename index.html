@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>What's in your kitchen?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- CSS Reference Sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+</head>
+
+<body>
+    <div id="topbar">
+        <h1>What's in your Kitchen?</h1>
+        <p>Let's get cooking!</p>
+        <button id="continue">Continue to site</button>
+        <button id="back">Sign Up</button>
+    </div>
+
+
+    <!-- sign up page -->
+    <div>
+        <form id="sign-up-form" class="col-sm-4">
+            <h3 id="header">Sign up today. It's free.</h3>
+            <div class="error-messages" style="display:none;"></div>
+            <div class="form-group">
+                <label for="exampleInputName"></label>
+                <input type="text" class="form-control" id="exampleInputName" placeholder="enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputZipcode"></label>
+                <input type="number" class="form-control" id="exampleInputZipcode" placeholder="enter your zipcode" required>
+            </div>
+            <button type="submit" id="add-user" class="btn btn-primary">Sign up</button>
+        </form>
+    </div>
+
+    <div class="container main">
+        <!-- search bar -->
+        <div class="row">
+            <div class="col-sm-12">
+                <form role="form" autocomplete="on">
+                    <div class="form-group">
+                        <label for="ingredients"></label>
+                        <div class="input-group mb-3">
+                            <input id="ingredient-search" type="text" class="form-control" placeholder="What's in your kitchen?" aria-label="Recipient's ingredients"
+                                aria-describedby="basic-addon2" multiple>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit" id="recipe-search" style="background-color: white;">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- This row will handle all of the retrieved recipes -->
+        <div class="row">
+            <div class="col-sm-6">
+                <br>
+
+                <!-- This panel will initially be made up of a panel and wells for each of the recipes retrieved -->
+                <div class="card">
+
+                    <!-- Panel Heading for the retrieved recipes box -->
+                    <div class="card-header">
+                        <strong>Recipes</strong>
+                    </div>
+
+                    <!-- This main panel will hold each of the resulting recipes -->
+                    <div class="card-body" id="recipe-section">
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <!-- This row will handle all of the retrieved restaurants -->
+            <!-- <div class="row"> -->
+            <div class="col-sm-6">
+                <br>
+
+                <!-- This panel will initially be made up of a panel and wells for each of the restaurants retrieved -->
+                <div class="card">
+
+                    <!-- Panel Heading for the retrieved articles box -->
+                    <div class="card-header">
+                        <strong> If you'd like to eat out instead...</strong>
+                    </div>
+
+                    <!-- This main panel will hold each of the resulting restaurants -->
+                    <div class="card-body" id="restaurant-section">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- get rid of blurriness -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <!-- form validation
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js"></script> -->
+    <!-- Code to the JavaScript File -->
+    <script src="assets/javascript.js"></script>
+</body>
+
+</html>

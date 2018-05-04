@@ -1,0 +1,134 @@
+
+body {
+    background-image: url("https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?cs=srgb&dl=basil-delicious-food-459469.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .9;
+    /* position: fixed; */
+}
+.navbar{
+    /* font-size: 30px;
+    padding-right: 10px; */
+    height: 150px;
+}
+
+#logo{
+    padding-left: 70px;
+    width: 200px;
+    height: 75px;
+}
+
+.dropdown{
+    padding-right: 70px;
+}
+
+#start {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+} 
+
+#add-user {
+    float: right;
+}
+
+#sign-up-form {
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    width: 60%;
+    padding: 60px;
+    margin-top: 40px;
+    border-radius: 25px;
+    /* border: 3px solid gray; */
+    /* background-image: url("../assets/images/knife.png"); */
+    background-size: 10%;
+    opacity: .8;
+    background-color: white;
+    
+   
+}
+
+#header{
+    color: black;
+    background-color: gray;
+    border: 2px solid darkgray;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.error-messages{
+    color: red;
+    font-size: 20px;
+    border: 3px solid transparent;
+    background-color: white;
+    text-align: center;
+}
+
+.btn{
+    color: black;
+    background-color: gray;
+    border-radius:10px;
+    border: 2px solid darkgray;
+}
+
+header {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    
+}
+
+ul{
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+img {
+    height: 150px;
+    width:200px;
+    margin: 5px;
+
+}
+
+.jumbotron{
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /* margin-top: 10px; */
+}
+
+li, ul{list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+li {
+margin-bottom: 20px;
+}
+.card-header {
+text-align: center;
+}
+
+li div {
+width: 75%;
+height: 250px;
+margin: 0 auto;
+}
+
+#topbar {
+    background-color: white;
+    height: 150px;
+    padding-left: 15px;
+    opacity: .9;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#continue, #back {
+    background-color: lightblue;
+    border-radius: 5px;
+}
