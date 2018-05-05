@@ -1,4 +1,5 @@
 //$.backstretch("http://res.cloudinary.com/codingbootcamp/image/upload/c_fit,h_700/v1524791753/background.jpg");
+var userZipcode;
 $("#back").hide();
 $(".container").hide();
 $("#add-user").click(function (event) {
@@ -41,12 +42,15 @@ $("#add-user").click(function (event) {
     email: email,
     zipcode: zipcode
   });
-  
+database.ref().once("value").then(function(snapshot){
+  userZipcode = (snapshot.val().zipcode);
+})
+
   }else{
     $(".error-messages").text("The form is not complete.").show();
   }
- 
-  
+
+
 
 });
 
@@ -102,7 +106,7 @@ $("#recipe-search").on("click", function(event) {
       $("#recipe-section").empty();
       $("#recipe-section").append(recipeList);
     });
-  var userZipcode = 28277;
+  
   var yelpqueryURL = "https://school.cloud.tyk.io/yelp?location=" + userZipcode + "&radius=8046&limit=10";
 
   $.ajax({
@@ -135,5 +139,7 @@ $("#recipe-search").on("click", function(event) {
     })
 
 });
+
+
 
 
